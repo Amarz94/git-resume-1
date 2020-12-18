@@ -25,10 +25,10 @@ function resumeLoad() {
         .css('max-width', '250px')
         .css('height', 'auto')
         .css('max-height', '300px')
-        document.getElementById("address").textContent = "Address: " + userAddr
-        document.getElementById("emailInput").textContent = "Email: " + userEmail
-        document.getElementById("userPhone").textContent = "Phone Number: " + formatPhoneNumber(phoneNum)
-        document.getElementById("userSite").textContent = "Site: " + response.blog
+        document.getElementById("address").innerHTML = '<i class="fas fa-map-marked"></i>"Address: ' + userAddr
+        document.getElementById("emailInput").innerHTML = "Email: " + userEmail
+        document.getElementById("userPhone").innerHTML = "Phone Number: " + formatPhoneNumber(phoneNum)
+        document.getElementById("userSite").innerHTML = "Site: " + response.blog
         $.ajax({
             url: gitRepo,
             method: "GET"
